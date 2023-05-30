@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather main</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Custom CSS Styles */
+      body {
+        background-color: #333333;
+      }
+
+      .text-primary {
+        color: #003366;
+      }
+
+      .search-btn {
+        background-color: #003366;
+        border-color: #003366;
+        transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+      }
+
+      .search-btn:hover {
+        background-color: #000000;
+        border-color: #000000;
+      }
+
+      .search-btn:focus {
+        outline: none;
+        box-shadow: none;
+      }
+
+      .bg-blue-550 {
+        background-color: #0055aa;
+      }
+
+      .bg-blue-600 {
+        background-color: #003366;
+      }
+
+      .dark:focus:ring-blue-800 {
+        box-shadow: none;
+      }
+
+      .day1,
+      .day2,
+      .day3,
+      .day4,
+      .day5 {
+        border-color: #333333;
+      }
+
+      .date {
+        color: #ffffff;
+      }
+
+      .currentWeather {
+        background-color: #ffffff;
+        border-color: #333333;
+        color: #000000;
+      }
+
+      .grid-cols-5 > * {
+        border-color: #333333;
+      }
+    </style>
+  </head>
+
+  <body class="bg-slate-500">
+    <header>
+      <h1 class="text-3xl font-bold flex justify-center">
+        Let's checkout the weather!
+      </h1>
+      <div class="flex justify-center m-1">
+        <div class="xl:w-96">
+          <div class="relative flex w-full flex-wrap items-stretch">
+            <input
+              type="search"
+              class="city relative m-0 -mr-px 
+              block w-[1%] min-w-0 flex-auto rounded-l 
+              border border-solid border-neutral-300 
+              bg-transparent bg-clip-padding px-3 py-1.5 
+              text-base font-normal text-neutral-700 outline-none transition 
+              duration-300 ease-in-out focus:border-primary-600 
+              focus:text-neutral-700 focus:shadow-te-primary 
+              focus:outline-none dark:border-neutral-600 dark:text-neutral-200 
+              dark:placeholder:text-neutral-200 bg-white"
+              input-type="text"
+              placeholder="Search"
+              aria-label="Search"
+              aria-describedby="button-addon3"
+            />
+            <button
+              class="search-btn relative z-[2]  
+              rounded-r border-3 border-primary 
+              px-7 py-4 text-xs font-medium uppercase 
+              text-primary text-white transition duration-150 
+              ease-in-out bg-blue-600 hover:bg-black hover:bg-opacity-5 
+              focus:outline-none focus:ring-0"
+              type="button"
+              id="button-addon3"
+              data-te-ripple-init
